@@ -6,7 +6,7 @@
 Изученные команды:
 
 * [`grep`](http://linux.die.net/man/1/grep)
-* `su`
+* [`su`](http://linux.die.net/man/1/su)
 
 Материал:
 
