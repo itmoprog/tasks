@@ -7,6 +7,7 @@
 
 * [`awk`](http://linux.die.net/man/1/awk)
 * [`whoami`](http://linux.die.net/man/1/whoami)
+* [`finger`](http://linux.die.net/man/1/finger)
 * [`users`](http://linux.die.net/man/1/users)
 * [`last`](http://linux.die.net/man/1/last)
 
