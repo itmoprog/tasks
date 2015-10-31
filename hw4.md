@@ -26,7 +26,6 @@
   ```shell
   for i in array; do команды; done
   ```
-* 
 
 ## Домашнее задание №3
 
