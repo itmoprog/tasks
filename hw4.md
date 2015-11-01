@@ -61,3 +61,16 @@ __К 7 ноября!__
 * Какие зафиксированы самый высокий и самый низкий баллы при поступлении? Указать каждый балл на разных строчках.
 
   > _Подсказка_: `man tail`.
+
+### Необязательное задание
+
+1. Каково предназначение следующего скрипта? Описать словами.
+
+  ```shell
+  for i in /home/*/hw2/info
+  do
+    givendate=`awk '{print $4}' $i | awk -F- '{print $3$2$1}'`
+    datetocompare=`date --date="18 years ago" +"%Y%m%d"`
+    if [ $datetocompare -lt $givendate ]; then awk '{print $2,$1}' $i; fi
+  done
+  ```
