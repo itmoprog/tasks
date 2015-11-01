@@ -69,8 +69,14 @@ __К 7 ноября!__
   ```shell
   for i in /home/*/hw2/info
   do
-    givendate=`awk '{print $4}' $i | awk -F- '{print $3$2$1}'`
-    datetocompare=`date --date="18 years ago" +"%Y%m%d"`
-    if [ $datetocompare -lt $givendate ]; then awk '{print $2,$1}' $i; fi
-  done
+    givenstamp=`date --date="$(awk '{print $4}' $i | \
+      awk -F- '{print $3"-"$2"-"$1}')" +%s`
+    stamptocompare=`date --date="18 years ago" +%s`
+    if [ $stamptocompare -lt $givenstamp ]
+    then
+      stampdiff=$((givenstamp-stamptocompare))
+      echo "$stampdiff `awk '{print $1,$2}' $i` \
+      `echo "scale=0;$stampdiff/86400+1" | bc`"
+    fi
+  done | sort -n | awk '{print $3,$2,"("$4")"}'
   ```
