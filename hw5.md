@@ -5,6 +5,7 @@
 
 ### Изученные команды:
 
+* [`diff`](http://linux.die.net/man/1/diff)
 * [`git`](http://linux.die.net/man/1/git)
 
 ### Материал:
